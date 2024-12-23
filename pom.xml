@@ -45,6 +45,21 @@
             <version>6.8.8</version> <!-- Pastikan menggunakan versi terbaru -->
             <scope>test</scope>
         </dependency>
+
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.2</version> <!-- Gunakan versi terbaru -->
+        </dependency>
+
     </dependencies>
 
 
