@@ -1,3 +1,5 @@
+package testSuite;
+
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
@@ -6,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 public class RestAssuredTestNGExample1Test {
 
     @Test
-    public void testGetEndpoint() {
+    public void testGetEndpoint1() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         given()
@@ -22,7 +24,7 @@ public class RestAssuredTestNGExample1Test {
     }
 
     @Test
-    public void testPostEndpoint() {
+    public void testPostEndpoint1() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         given()

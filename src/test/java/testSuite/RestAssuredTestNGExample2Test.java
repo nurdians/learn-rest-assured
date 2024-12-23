@@ -1,3 +1,5 @@
+package testSuite;
+
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
@@ -8,7 +10,7 @@ import static org.hamcrest.Matchers.notNullValue;
 public class RestAssuredTestNGExample2Test {
 
     @Test
-    public void testGetEndpoint() {
+    public void testGetEndpoint2() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         given()
@@ -24,15 +26,17 @@ public class RestAssuredTestNGExample2Test {
     }
 
     @Test
-    public void testPostEndpoint() {
+    public void testPostEndpoint2() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         given()
                 .header("Content-Type", "application/json")
                 .body("{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
+                .log().all()
                 .when()
                 .post("/posts")
                 .then()
+                .log().all()
                 .statusCode(201)
                 .body("title", equalTo("foo"))
                 .body("body", equalTo("bar"))
