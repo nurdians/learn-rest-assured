@@ -5,3 +5,6 @@
 
 ## How to run specific suite
 `mvn test -Dsurefire.suiteXmlFiles=src/test/java/testSuite/TestSuite.xml`
+
+## How to run specific groups
+`mvn test -Dgroups="test1,test2"`

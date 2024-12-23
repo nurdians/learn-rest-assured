@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class RestAssuredTestNGExample2Test {
 
-    @Test
+    @Test(groups = {"test2"}, priority = 1)
     public void testGetEndpoint2() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
@@ -25,7 +25,7 @@ public class RestAssuredTestNGExample2Test {
                 .body("title", notNullValue());
     }
 
-    @Test
+    @Test(groups = {"test1"}, priority = 2)
     public void testPostEndpoint2() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
