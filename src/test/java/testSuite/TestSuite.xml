@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MySuite" verbose="1">
+    <test name="MyTest" parallel="classes">
+        <classes>
+            <class name="testSuite.RestAssuredTestNGExample1Test"/>
+        </classes>
+    </test>
+</suite>
