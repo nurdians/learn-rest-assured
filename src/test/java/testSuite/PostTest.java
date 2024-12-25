@@ -1,9 +1,13 @@
 package testSuite;
 
+import entities.PostList;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
@@ -88,5 +92,15 @@ public class PostTest {
 //        ;
         Response response = get("/posts/1");
         System.out.println(response.body().jsonPath().getString("title"));
+    }
+
+    @Test
+    public void getALlPostData() {
+        Response response = get("https://jsonplaceholder.typicode.com/posts");
+        response.then().log().all();
+        PostList[] postList = response.as(PostList[].class);
+        List<PostList> postLists2 = Arrays.asList(postList);
+        System.out.println(postLists2.get(0).getBody());
+
     }
 }

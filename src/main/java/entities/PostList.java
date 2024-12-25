@@ -1,13 +1,13 @@
 package entities;
 
 import lombok.Data;
-import lombok.ToString;
+
 
 @Data
-@ToString
-public class BookResponse {
+public class PostList {
     private int id;
     private int userId;
     private String title;
     private String body;
+
 }

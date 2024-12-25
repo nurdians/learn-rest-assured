@@ -50,6 +50,7 @@ public class TestWithPojo {
                 .as(BookResponse.class);
 
         // Validasi menggunakan POJO
+        System.out.println("hasilnya " + response.toString());
         assert response.getTitle().equals("foo");
         assert response.getBody().equals("bar");
         assert response.getUserId() == 1;
