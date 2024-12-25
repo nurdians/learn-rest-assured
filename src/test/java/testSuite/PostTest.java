@@ -12,7 +12,7 @@ public class PostTest {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
     }
 
-    @Test(groups = {"test-post"}, priority = 0)
+    @Test(groups = {"test-post"}, priority = 1)
     public void getPostData() {
         given()
                 .log().all()
