@@ -37,6 +37,7 @@ public class PostTest {
                 .body("userId", equalTo(1))
                 .body("id", equalTo(1))
                 .body("title", notNullValue())
+                .time(lessThan(500L))
         ;
     }
 
